@@ -1,6 +1,5 @@
 
 export default () => ({
     isLoading: true,
-    entries:[]
+    entries: []
 })
-

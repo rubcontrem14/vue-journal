@@ -1,22 +1,25 @@
+
+
 export default {
+
     name: 'daybook',
-    path: '/daybook',
-    component: () => import(/* webpackChunkName: "dayBook" */ '@/modules/daybook/layouts/DayBookLayout'),
-    children:[
+    component: () => import(/* webpackChunkName: "daybook" */ '@/modules/daybook/layouts/DayBookLayout.vue'),
+    children: [
         {
             path: '',
             name: 'no-entry',
-            component: ()=>import(/* webpackChunkName: "dayBook no-entry" */ '@/modules/daybook/views/NoEntrySelected')
+            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/NoEntrySelected.vue'),
         },
         {
             path: ':id',
             name: 'entry',
-            component: ()=>import(/* webpackChunkName: "dayBook entry" */ '@/modules/daybook/views/EntryView'),
-            props: (route) => {
-                return{
+            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/EntryView.vue'),
+            props: ( route ) => {
+                return {
                     id: route.params.id
                 }
             }
-        },
+        }
     ]
+
 }

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutView debe de hacer match con el snapshot 1`] = `
+<div class="about">
+  <h1>This is an about page</h1>
+</div>
+`;
+
+exports[`Pruebas en AboutView debe de hacer match con el snapshot 1`] = `
+<div class="about">
+  <h1>This is an about page</h1>
+</div>
+`;
